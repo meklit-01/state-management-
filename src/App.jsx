@@ -1,11 +1,14 @@
 import React from 'react'
+import { UserContextProvider } from './assets/context/user-context-provider'
 import UserProfile from './UserProfile'
 import "./App.css"
 
 function App() {
   return (
     <div>
-    <UserProfile/>
+    <UserContextProvider>
+       <UserProfile/>
+    </UserContextProvider>
     </div>
   )
 }

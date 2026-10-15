@@ -1,17 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import { userContext } from './assets/context/user-context-provider'
 
 function UserProfile() {
-const [user , setUser] = useState(null);
+const {user, login, logout} = useContext(userContext);
 
-const login = () =>{
-    setUser({
-        name: "one",
-        email:"theOne@user.com"
-    })
-}
-const logout = () =>{
-    setUser(null)
-}
+
   return (
     <div>
         {user ? (
